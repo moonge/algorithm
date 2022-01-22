@@ -1,17 +1,17 @@
 package moong.algorithm.main;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import moong.algorithm.baekjoon.Money0;
 
-public class MainController {
+public class Main {
 
 	public static void main(String[] args) {
 		
-		// 20220120 - 백준 1147
-		int n = 10;
-		int k = 4200;
-		
+		// 2022-01-20
 		Money0 money = new Money0();
-		money.countMoney(n, k);
+		money.countMoney();
 
 	}
 

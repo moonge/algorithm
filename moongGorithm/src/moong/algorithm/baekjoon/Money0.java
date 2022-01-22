@@ -1,6 +1,7 @@
 package moong.algorithm.baekjoon;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Money0 {
 
@@ -16,15 +17,24 @@ public class Money0 {
 //	10000
 //	50000
 	
-	public void countMoney(int n, int k) {
+	public void countMoney() {
 		
-		int result = 0;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int k = sc.nextInt();
 		
-		Integer[] moneyKindArr = {1,5,10,50,100,500,1000,5000,10000,50000}; // 돈 종류
+		ArrayList<Integer> moneyKindArr = new ArrayList<Integer>(); // 돈 종
 		ArrayList<Integer> currentMoneyKindArr = new ArrayList<Integer>(); // 현재 돈 종류
 		
 		for(int i=0; i<n; i++) {
-			currentMoneyKindArr.add(moneyKindArr[i]);
+			moneyKindArr.add(sc.nextInt());
+		}
+		
+		int result = 0;
+		
+		
+		for(int i=0; i<n; i++) {
+			currentMoneyKindArr.add(moneyKindArr.get(i));
 		}
 		
 		// k값이 0이 아닌동안 돌기
